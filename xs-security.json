@@ -1,0 +1,19 @@
+{
+  "xsappname": "basic",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Display",
+      "description": "display"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "java backend service role template",
+      "scope-references"     : [
+        "$XSAPPNAME.Display"
+      ]
+    }
+  ]
+}

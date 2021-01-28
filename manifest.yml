@@ -1,0 +1,18 @@
+---
+
+applications:
+- name: approuter_basic
+  path: approuter
+  buildpacks:
+    - nodejs_buildpack
+  memory: 120M
+  routes:
+    - route: approuterbasic.cfapps.eu10.hana.ondemand.com
+  env:
+    TENANT_HOST_PATTERN: 'approuterbasic-(.*).cfapps.eu10.hana.ondemand.com'
+    destinations: >
+      [
+         {"name":"dest_basic", "url" :"https://basic.cfapps.eu10.hana.ondemand.com", "forwardAuthToken": true }
+      ]
+  services:
+    - my_xsuaa

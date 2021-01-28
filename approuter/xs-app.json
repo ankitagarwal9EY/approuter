@@ -1,0 +1,8 @@
+{
+"welcomeFile": "/ServicesTest",
+  "routes": [{
+    "source": "/",
+    "target": "/",
+    "destination": "dest_basic"
+    }]
+}
